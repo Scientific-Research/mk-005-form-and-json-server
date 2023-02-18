@@ -53,6 +53,7 @@ function App() {
               <label htmlFor="">Description</label>
               <div>
                 <textarea
+                  spellCheck="false"
                   value={formData.description}
                   onChange={(e) => handleFieldChange(e, "description")}
                 />
