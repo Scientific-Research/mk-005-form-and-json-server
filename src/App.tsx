@@ -4,7 +4,24 @@ function App() {
   return (
     <div className="App">
       <h1>Job Site</h1>
-      <p>Welcome to this site!</p>
+      <form action="">
+        <fieldset>
+          <legend>New Job</legend>
+          <div className="row">
+            <label htmlFor="">Job Title</label>
+            <div>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div className="row">
+            <label htmlFor="">Description</label>
+            <div>
+              <textarea />
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
   );
 }
