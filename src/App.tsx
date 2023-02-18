@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { Value } from "sass";
 import "./App.scss";
 
+interface IFormData {
+  jobTitle: string;
+  description: string;
+}
 const _formData = {
   jobTitle: "",
   description: "",
@@ -9,6 +14,13 @@ const _formData = {
 function App() {
   const [formData, setFormData] = useState(_formData);
 
+  const handleFieldChange = (e: any, fieldName: string) => {
+    const _Data = e.target.value;
+    formData.jobTitle = _Data;
+    setFormData({ ...formData });
+    // setFormData({ ..._Data });
+    console.log(formData);
+  };
   return (
     <div className="App">
       <h1>Job Site</h1>
@@ -20,14 +32,18 @@ function App() {
             <div className="row">
               <label htmlFor="">Job Title</label>
               <div>
-                <input type="text" />
+                <input
+                  value={formData.jobTitle}
+                  type="text"
+                  onChange={(e) => handleFieldChange(e, "jobTitle")}
+                />
               </div>
             </div>
 
             <div className="row">
               <label htmlFor="">Description</label>
               <div>
-                <textarea />
+                <textarea value={formData.description} />
               </div>
             </div>
           </fieldset>
