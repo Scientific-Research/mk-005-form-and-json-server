@@ -7,7 +7,7 @@ interface IFormData {
 }
 const _formData = {
   jobTitle: "",
-  description: ""
+  description: "",
 };
 
 function App() {
@@ -64,6 +64,9 @@ function App() {
           </fieldset>
         </form>
 
+        <div className="currentJobs">
+          Show Jobs
+        </div>
         <div className="debuggingArea">
           <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
