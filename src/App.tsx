@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.scss";
+import axios from "axios";
 
 interface IFormData {
   jobTitle: string;
@@ -12,7 +13,11 @@ const _formData = {
 
 function App() {
   const [formData, setFormData] = useState(_formData);
-
+  useEffect(() => {
+    (async () => {
+      const response = await axios("http://localhost:5557/jobs");
+    })();
+  });
   const handleFieldChange = (e: any, fieldName: string) => {
     const _Data = e.target.value;
 
@@ -64,9 +69,7 @@ function App() {
           </fieldset>
         </form>
 
-        <div className="currentJobs">
-          Show Jobs
-        </div>
+        <div className="currentJobs">Show Jobs</div>
         <div className="debuggingArea">
           <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
