@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Value } from "sass";
 import "./App.scss";
 
 interface IFormData {
@@ -8,7 +7,7 @@ interface IFormData {
 }
 const _formData = {
   jobTitle: "",
-  description: "",
+  description: ""
 };
 
 function App() {
