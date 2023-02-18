@@ -7,6 +7,10 @@
         {
             "jobTitle":"Angular Developer",
             "description":"This job is with Angular."
+        },
+        {
+            "jobTitle":"Next.js Developer",
+            "description":"This job is with Next.js."
         }
     ]
 }
