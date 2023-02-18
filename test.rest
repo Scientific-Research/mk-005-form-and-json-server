@@ -1,0 +1,5 @@
+@url=http://localhost:5557
+
+### GET JOBS
+GET {{url}}/jobs
+

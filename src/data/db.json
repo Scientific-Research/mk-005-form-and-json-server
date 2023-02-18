@@ -6,11 +6,15 @@
         },
         {
             "jobTitle":"Angular Developer",
-            "description":"This job is with Angular."
+            "description":"This is a job with Angular."
         },
         {
             "jobTitle":"Next.js Developer",
-            "description":"This job is with Next.js."
+            "description":"This is a job with Next.js."
+        },
+        {
+            "jobTitle":"C# Developer",
+            "description":"This is a job with C#."
         }
     ]
 }
