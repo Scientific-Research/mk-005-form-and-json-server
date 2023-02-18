@@ -16,7 +16,16 @@ function App() {
 
   const handleFieldChange = (e: any, fieldName: string) => {
     const _Data = e.target.value;
-    formData.jobTitle = _Data;
+
+    switch (fieldName) {
+      case "jobTitle":
+        formData.jobTitle = _Data;
+        break;
+
+      case "description":
+        formData.description = _Data;
+        break;
+    }
     setFormData({ ...formData });
     // setFormData({ ..._Data });
     console.log(formData);
@@ -43,7 +52,10 @@ function App() {
             <div className="row">
               <label htmlFor="">Description</label>
               <div>
-                <textarea value={formData.description} />
+                <textarea
+                  value={formData.description}
+                  onChange={(e) => handleFieldChange(e, "description")}
+                />
               </div>
             </div>
           </fieldset>
