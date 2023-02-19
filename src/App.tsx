@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import axios from "axios";
 
-interface IFormData {
+interface IJobs {
   jobTitle: string;
   description: string;
 }
@@ -75,13 +75,19 @@ function App() {
             </div>
           </fieldset>
         </form>
-
-        {/* <div className="currentJobs">{formData.jobTitle}</div>
-        <div className="currentJobs">{formData.description}</div> */}
         <div className="currentJobs">
           <h1>There are {jobs.length} Jobs.</h1>
         </div>
-
+        <div className="currentJobs">
+          {jobs.map((job: IJobs) => {
+            return (
+              <>
+                <div>{job.jobTitle}</div>
+                <div>{job.description}</div>
+              </>
+            );
+          })}
+        </div>
         <div className="debuggingArea">
           <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
