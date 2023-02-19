@@ -3,3 +3,12 @@
 ### GET JOBS
 GET {{url}}/jobs
 
+### POST JOBS
+POST {{url}}/jobs
+content-type: application/json
+
+{
+    "jobTitle": "Ruby Developer1",
+    "description": "This is a good Ruby Job."
+}
+

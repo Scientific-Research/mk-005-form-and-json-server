@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.scss";
 import axios from "axios";
 
-interface IJobs {
+interface IJob {
+  id: number;
   jobTitle: string;
   description: string;
 }
 const _formData = {
+  id: 0,
   jobTitle: "",
   description: "",
 };
@@ -15,7 +17,7 @@ const backendUrl = "http://localhost:5557";
 
 function App() {
   const [formData, setFormData] = useState(_formData);
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState<IJob[]>([]);
 
   useEffect(() => {
     (async () => {
@@ -76,15 +78,15 @@ function App() {
           </fieldset>
         </form>
         <div className="currentJobs">
-          <h1>There are {jobs.length} Jobs.</h1>
+          <h1>There are {jobs.length} Jobs:</h1>
         </div>
         <div className="currentJobs">
-          {jobs.map((job: IJobs) => {
+          {jobs.map((job: IJob) => {
             return (
-              <>
+              <div className="job" key={job.id}>
                 <div>{job.jobTitle}</div>
-                <div>{job.description}</div>
-              </>
+                {/* <div>{job.description}</div> */}
+              </div>
             );
           })}
         </div>
