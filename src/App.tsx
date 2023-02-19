@@ -11,13 +11,20 @@ const _formData = {
   description: "",
 };
 
+const backendUrl = "http://localhost:5557";
+
 function App() {
   const [formData, setFormData] = useState(_formData);
+  const [jobs, setJobs] = useState([]);
+
   useEffect(() => {
     (async () => {
-      const response = await axios("http://localhost:5557/jobs");
+      const response = await axios.get(`${backendUrl}/jobs`);
+      const _jobs = response.data;
+      console.log(_jobs);
+      setJobs(_jobs);
     })();
-  });
+  }, []);
   const handleFieldChange = (e: any, fieldName: string) => {
     const _Data = e.target.value;
 
@@ -69,7 +76,12 @@ function App() {
           </fieldset>
         </form>
 
-        <div className="currentJobs">Show Jobs</div>
+        {/* <div className="currentJobs">{formData.jobTitle}</div>
+        <div className="currentJobs">{formData.description}</div> */}
+        <div className="currentJobs">
+          <h1>There are {jobs.length} Jobs.</h1>
+        </div>
+
         <div className="debuggingArea">
           <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
