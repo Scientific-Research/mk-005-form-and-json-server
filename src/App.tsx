@@ -47,7 +47,11 @@ function App() {
   const handleSaveForm = (e: any) => {
     e.preventDefault();
     // alert("Data saved already!");
-    console.log("saving!");
+    // console.log("saving!");
+    (async () => {
+      const response = await axios.post(`${backendUrl}/jobs`, formData);
+      console.log(response);
+    })();
   };
   return (
     <div className="App">
