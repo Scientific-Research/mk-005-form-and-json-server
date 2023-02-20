@@ -45,7 +45,7 @@ function App() {
   };
 
   const handleSaveForm = () => {
-    
+    alert("Data saved already!");
   };
   return (
     <div className="App">
