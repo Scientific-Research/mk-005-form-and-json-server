@@ -43,6 +43,10 @@ function App() {
     // setFormData({ ..._Data });
     console.log(formData);
   };
+
+  const handleSaveForm = () => {
+    
+  };
   return (
     <div className="App">
       <h1>Job Site</h1>
@@ -73,7 +77,7 @@ function App() {
               </div>
             </div>
             <div className="buttonRow">
-              <button>Save</button>
+              <button onClick={() => handleSaveForm()}>Save</button>
             </div>
           </fieldset>
         </form>
