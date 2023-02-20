@@ -19,14 +19,17 @@ function App() {
   const [formData, setFormData] = useState(_formData);
   const [jobs, setJobs] = useState<IJob[]>([]);
 
+  const getJobs = async () => {
+    const response = await axios.get(`${backendUrl}/jobs`);
+    const _jobs = response.data;
+    console.log(_jobs);
+    setJobs(_jobs);
+  };
+
   useEffect(() => {
-    (async () => {
-      const response = await axios.get(`${backendUrl}/jobs`);
-      const _jobs = response.data;
-      console.log(_jobs);
-      setJobs(_jobs);
-    })();
+    getJobs();
   }, []);
+
   const handleFieldChange = (e: any, fieldName: string) => {
     const _Data = e.target.value;
 
@@ -50,7 +53,7 @@ function App() {
     // console.log("saving!");
     (async () => {
       const response = await axios.post(`${backendUrl}/jobs`, formData);
-      console.log(response);
+      // console.log(response);
     })();
   };
   return (
