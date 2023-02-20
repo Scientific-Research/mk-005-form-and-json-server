@@ -54,6 +54,8 @@ function App() {
     (async () => {
       const response = await axios.post(`${backendUrl}/jobs`, formData);
       getJobs();
+      formData.jobTitle = "";
+      formData.description = "";
       // console.log(response);
     })();
   };
