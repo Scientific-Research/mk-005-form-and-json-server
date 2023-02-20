@@ -44,8 +44,10 @@ function App() {
     console.log(formData);
   };
 
-  const handleSaveForm = () => {
-    alert("Data saved already!");
+  const handleSaveForm = (e: any) => {
+    e.preventDefault();
+    // alert("Data saved already!");
+    console.log("saving!");
   };
   return (
     <div className="App">
@@ -77,7 +79,7 @@ function App() {
               </div>
             </div>
             <div className="buttonRow">
-              <button onClick={() => handleSaveForm()}>Save</button>
+              <button onClick={(e) => handleSaveForm(e)}>Save</button>
             </div>
           </fieldset>
         </form>
