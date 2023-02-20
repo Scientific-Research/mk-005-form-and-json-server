@@ -53,6 +53,7 @@ function App() {
     // console.log("saving!");
     (async () => {
       const response = await axios.post(`${backendUrl}/jobs`, formData);
+      getJobs();
       // console.log(response);
     })();
   };
