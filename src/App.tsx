@@ -57,6 +57,8 @@ function App() {
       formData.jobTitle = "";
       formData.description = "";
       // console.log(response);
+      // setFormData(_formData);
+      // setFormData({ ...formData });
     })();
   };
   return (
