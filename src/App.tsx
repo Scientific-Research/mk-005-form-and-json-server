@@ -127,7 +127,15 @@ function App() {
             <div className="row">
               <label htmlFor="">Details</label>
               <div>
-                <input type="checkbox" /> remote
+                <div>
+                  <input type="checkbox" /> remote
+                </div>
+                <div>
+                  <input type="checkbox" /> full-time
+                </div>
+                <div>
+                  <input type="checkbox" /> large company
+                </div>
               </div>
             </div>
 
