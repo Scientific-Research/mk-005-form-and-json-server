@@ -14,7 +14,7 @@ body {
   }
 
   .currentJobs {
-    .title{
+    .title {
       margin-bottom: 0.5rem;
     }
     .delete {
@@ -37,6 +37,9 @@ body {
         color: rgb(200, 169, 110) !important;
       }
 
+      .row:not(:first-of-type) {
+        margin-top: 1rem;
+      }
       label {
         display: block;
         margin-bottom: 0.3rem;
