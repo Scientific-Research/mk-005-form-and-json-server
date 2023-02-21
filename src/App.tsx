@@ -45,20 +45,33 @@ function App() {
   }, []);
 
   const handleFieldChange = (e: any, fieldName: string) => {
-    const _Data = e.target.value;
-    console.log(_Data);
+    const value = e.target.value;
+    const checked = e.target.checked;
+    console.log(checked);
 
     switch (fieldName) {
       case "jobTitle":
-        formData.jobTitle = _Data;
+        formData.jobTitle = value;
         break;
 
       case "description":
-        formData.description = _Data;
+        formData.description = value;
         break;
 
       case "city":
-        formData.city = _Data;
+        formData.city = value;
+        break;
+
+      case "remote":
+        formData.details.remote = checked;
+        break;
+
+      case "fullTime":
+        formData.details.fullTime = checked;
+        break;
+
+      case "largeCompany":
+        formData.details.largeCompany = checked;
         break;
     }
     setFormData({ ...formData });
@@ -141,15 +154,24 @@ function App() {
               <label htmlFor="">Details</label>
               <div>
                 <div>
-                  <input type="checkbox" checked={formData.details.remote} />{" "}
+                  <input
+                    onChange={(e) => handleFieldChange(e, "remote")}
+                    type="checkbox"
+                    checked={formData.details.remote}
+                  />{" "}
                   remote
                 </div>
                 <div>
-                  <input type="checkbox" checked={formData.details.fullTime} />{" "}
+                  <input
+                    onChange={(e) => handleFieldChange(e, "fullTime")}
+                    type="checkbox"
+                    checked={formData.details.fullTime}
+                  />{" "}
                   full-time
                 </div>
                 <div>
                   <input
+                    onChange={(e) => handleFieldChange(e, "largeCompany")}
                     type="checkbox"
                     checked={formData.details.largeCompany}
                   />{" "}
