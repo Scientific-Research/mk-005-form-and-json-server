@@ -6,11 +6,13 @@ interface IJob {
   id: number;
   jobTitle: string;
   description: string;
+  city: string;
 }
 const _formData = {
   id: 0,
   jobTitle: "",
   description: "",
+  city: "",
 };
 
 const backendUrl = "http://localhost:5557";
@@ -99,6 +101,19 @@ function App() {
                 />
               </div>
             </div>
+
+            <div className="row">
+              <label htmlFor="">State</label>
+              <div>
+                <select name="" id="">
+                  <option value="hamburg">Hamburg</option>
+                  <option value="berlin">Berlin</option>
+                  <option value="dresden">Dresden</option>
+                  <option value="leipzig">Leipzig</option>
+                </select>
+              </div>
+            </div>
+
             <div className="buttonRow">
               <button onClick={(e) => handleSaveForm(e)}>Save</button>
             </div>
