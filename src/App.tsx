@@ -47,7 +47,7 @@ function App() {
   const handleFieldChange = (e: any, fieldName: string) => {
     const value = e.target.value;
     const checked = e.target.checked;
-    console.log(checked);
+    // console.log(checked);
 
     switch (fieldName) {
       case "jobTitle":

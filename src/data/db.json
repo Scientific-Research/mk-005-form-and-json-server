@@ -29,6 +29,28 @@
       "description": "This is an interesting job about ASP.Net.",
       "city": "hamburg",
       "id": 5
+    },
+    {
+      "jobTitle": "Ruby Developer",
+      "description": "<cv<v<sdv<sdv",
+      "city": "hamburg",
+      "details": {
+        "remote": true,
+        "fullTime": true,
+        "largeCompany": true
+      },
+      "id": 6
+    },
+    {
+      "jobTitle": "Go Developer",
+      "description": "sdsdfsdfsdf",
+      "city": "berlin",
+      "details": {
+        "remote": true,
+        "fullTime": false,
+        "largeCompany": true
+      },
+      "id": 7
     }
   ]
 }
