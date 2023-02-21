@@ -62,6 +62,17 @@
         "largeCompany": false
       },
       "id": 8
+    },
+    {
+      "jobTitle": "Typescript Developer ",
+      "description": "This is a very good Job for Typescript developer!",
+      "city": "dresden",
+      "details": {
+        "remote": true,
+        "fullTime": true,
+        "largeCompany": true
+      },
+      "id": 9
     }
   ]
 }
