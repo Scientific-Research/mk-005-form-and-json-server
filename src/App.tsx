@@ -9,7 +9,6 @@ interface IJob {
   city: string;
 }
 const _formData = {
-  id: 0,
   jobTitle: "",
   description: "",
   city: "",
@@ -116,6 +115,7 @@ function App() {
                   id=""
                   value={formData.city}
                 >
+                  <option value="">Please choose</option>
                   <option value="hamburg">Hamburg</option>
                   <option value="berlin">Berlin</option>
                   <option value="dresden">Dresden</option>
