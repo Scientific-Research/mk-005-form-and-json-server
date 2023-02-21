@@ -51,6 +51,17 @@
         "largeCompany": true
       },
       "id": 7
+    },
+    {
+      "jobTitle": "React Developer",
+      "description": "",
+      "city": "berlin",
+      "details": {
+        "remote": true,
+        "fullTime": false,
+        "largeCompany": false
+      },
+      "id": 8
     }
   ]
 }

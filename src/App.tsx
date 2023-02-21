@@ -51,7 +51,13 @@ function App() {
 
     switch (fieldName) {
       case "jobTitle":
-        formData.jobTitle = value;
+        if (value === "/brr") {
+          formData.jobTitle = "React Developer";
+          formData.city = "berlin";
+          formData.details.remote = true;
+        } else {
+          formData.jobTitle = value;
+        }
         break;
 
       case "description":
