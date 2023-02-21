@@ -102,7 +102,9 @@ function App() {
           {jobs.map((job: IJob) => {
             return (
               <div className="job" key={job.id}>
-                <div>{job.jobTitle}</div>
+                <div className="title">
+                  {job.jobTitle} (<span className="delete">delete</span>)
+                </div>
                 {/* <div>{job.description}</div> */}
               </div>
             );
