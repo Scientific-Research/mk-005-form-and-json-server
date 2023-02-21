@@ -2,16 +2,29 @@ import React, { useEffect, useState } from "react";
 import "./App.scss";
 import axios from "axios";
 
+interface IDetails {
+  details: {
+    remote: boolean;
+    fullTime: boolean;
+    largeCompany: boolean;
+  };
+}
 interface IJob {
   id: number;
   jobTitle: string;
   description: string;
   city: string;
+  details: IDetails;
 }
 const _formData = {
   jobTitle: "",
   description: "",
   city: "",
+  details: {
+    remote: false,
+    fullTime: false,
+    largeCompany: false,
+  },
 };
 
 const backendUrl = "http://localhost:5557";
@@ -128,13 +141,19 @@ function App() {
               <label htmlFor="">Details</label>
               <div>
                 <div>
-                  <input type="checkbox" /> remote
+                  <input type="checkbox" checked={formData.details.remote} />{" "}
+                  remote
                 </div>
                 <div>
-                  <input type="checkbox" /> full-time
+                  <input type="checkbox" checked={formData.details.fullTime} />{" "}
+                  full-time
                 </div>
                 <div>
-                  <input type="checkbox" /> large company
+                  <input
+                    type="checkbox"
+                    checked={formData.details.largeCompany}
+                  />{" "}
+                  large company
                 </div>
               </div>
             </div>
