@@ -47,6 +47,15 @@ function App() {
     console.log(formData);
   };
 
+  const handleDeleteJob = (job: IJob) => {
+    (async () => {
+      const response = await axios.delete(`${backendUrl}/jobs/${job.id}`);
+      // const _jobs = response.data;
+      // setJobs({ ..._jobs });
+      getJobs();
+    })();
+  };
+
   const handleSaveForm = (e: any) => {
     e.preventDefault();
     // alert("Data saved already!");
@@ -103,7 +112,11 @@ function App() {
             return (
               <div className="job" key={job.id}>
                 <div className="title">
-                  {job.jobTitle} (<span className="delete">delete</span>)
+                  {job.jobTitle} (
+                  <span onClick={() => handleDeleteJob(job)} className="delete">
+                    delete
+                  </span>
+                  )
                 </div>
                 {/* <div>{job.description}</div> */}
               </div>
