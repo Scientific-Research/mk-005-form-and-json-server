@@ -1,43 +1,34 @@
 {
   "Jobs": [
     {
-      "id": 1,
       "jobTitle": "Java Developer",
-      "description": "This is an interesting job about Java."
+      "description": "This is an interesting job about Java.",
+      "city": "berlin",
+      "id": 1
     },
     {
-      "id": 2,
       "jobTitle": "C# Developer",
-      "description": "This is an interesting job about C#."
+      "description": "This is an interesting job about C#.",
+      "city": "leipzig",
+      "id": 2
     },
     {
-      "id": 3,
       "jobTitle": "PHP Developer",
-      "description": "This is an interesting job about PHP."
+      "description": "This is an interesting job about PHP.",
+      "city": "dresden",
+      "id": 3
     },
     {
-      "id": 4,
-      "jobTitle": "asd",
-      "description": "asda",
-      "city": ""
+      "jobTitle": "Kotlin developer",
+      "description": "This is an interesting job about Kotlin.",
+      "city": "dresden",
+      "id": 4
     },
     {
-      "id": 5,
-      "jobTitle": "asdASDF",
-      "description": "SDFSDf",
-      "city": ""
-    },
-    {
-      "id": 6,
-      "jobTitle": "dasf",
-      "description": "sdf",
-      "city": "leipzig"
-    },
-    {
-      "id": 7,
-      "jobTitle": "",
-      "description": "",
-      "city": "hamburg"
+      "jobTitle": "ASP.Net developer",
+      "description": "This is an interesting job about ASP.Net.",
+      "city": "hamburg",
+      "id": 5
     }
   ]
 }
