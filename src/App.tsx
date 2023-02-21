@@ -34,6 +34,7 @@ function App() {
 
   const handleFieldChange = (e: any, fieldName: string) => {
     const _Data = e.target.value;
+    console.log(_Data);
 
     switch (fieldName) {
       case "jobTitle":
@@ -42,6 +43,10 @@ function App() {
 
       case "description":
         formData.description = _Data;
+        break;
+
+      case "city":
+        formData.city = _Data;
         break;
     }
     setFormData({ ...formData });
@@ -103,9 +108,14 @@ function App() {
             </div>
 
             <div className="row">
-              <label htmlFor="">State</label>
+              <label htmlFor="">City</label>
               <div>
-                <select name="" id="">
+                <select
+                  onChange={(e) => handleFieldChange(e, "city")}
+                  name=""
+                  id=""
+                  value={formData.city}
+                >
                   <option value="hamburg">Hamburg</option>
                   <option value="berlin">Berlin</option>
                   <option value="dresden">Dresden</option>
