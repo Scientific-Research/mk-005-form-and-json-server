@@ -4,7 +4,7 @@
 GET {{url}}/jobs
 
 ### SHOW ONE JOB
-GET {{url}}/jobs/2
+GET {{url}}/jobs/1
 
 ### POST JOBS
 POST {{url}}/jobs
@@ -14,4 +14,7 @@ content-type: application/json
     "jobTitle": "Ruby Developer1",
     "description": "This is a good Ruby Job."
 }
+
+### DELETE JOB
+DELETE {{url}}/jobs/5
 
