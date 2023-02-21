@@ -124,6 +124,13 @@ function App() {
               </div>
             </div>
 
+            <div className="row">
+              <label htmlFor="">Details</label>
+              <div>
+                <input type="checkbox" /> remote
+              </div>
+            </div>
+
             <div className="buttonRow">
               <button onClick={(e) => handleSaveForm(e)}>Save</button>
             </div>
